@@ -2,10 +2,10 @@ import java.util.Stack;
 
 public class Calculator {
 
-    private Stack<Double> history = new Stack<Double>();
-    private double value = 0.0;
+    private static Stack<Double> history = new Stack<Double>();
+    private static double value = 0.0;
     
-    public double process(String input){
+    public static double process(String input){
         try{
             history.push(Double.parseDouble(input));
         }catch(Exception e){
@@ -24,5 +24,5 @@ public class Calculator {
         return value;
     }
 
-    public double getValue(){return value;}
+    public static double getValue(){return value;}
 }
